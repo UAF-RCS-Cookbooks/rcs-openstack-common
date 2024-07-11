@@ -1,10 +1,7 @@
 OpenStack Chef Cookbook - common
 ================================
 
-.. image:: https://governance.openstack.org/badges/cookbook-openstack-common.svg
-    :target: https://governance.openstack.org/reference/tags/index.html
-
-.. Change things from this point on
+This is now the RCS version of this cookbook.
 
 Description
 ===========
