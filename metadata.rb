@@ -1,5 +1,5 @@
 name             'rcs-openstack-common'
-maintainer 'UAF RCS'
+maintainer       'UAF RCS'
 maintainer_email 'chef@rcs.alaska.edu'
 license          'Apache-2.0'
 description      'Common OpenStack attributes, libraries and recipes.'
