@@ -85,6 +85,14 @@ when 'rhel'
     node.default['yum']['centos-rabbitmq']['managed'] = true
 
     include_recipe 'yum-centos'
+  when 9    
+    bash 'Setup CRB Repo' do # FIXME! This can't stay here
+      user 'root'
+      cwd '/tmp'
+      code <<-EOH
+        dnf config-manager --enable crb
+      EOH
+    end
   end
 
   include_recipe 'yum-epel'
