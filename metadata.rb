@@ -3,7 +3,7 @@ maintainer       'UAF RCS'
 maintainer_email 'chef@rcs.alaska.edu'
 license          'Apache-2.0'
 description      'Common OpenStack attributes, libraries and recipes.'
-version          '21.0.5'
+version          '21.0.6'
 
 %w(ubuntu redhat centos).each do |os|
   supports os
