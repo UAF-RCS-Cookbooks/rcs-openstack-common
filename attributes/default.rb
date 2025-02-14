@@ -145,11 +145,11 @@ default['openstack']['yum']['update_yum_cache'] = false
 default['openstack']['yum']['rdo_enabled'] = true
 default['openstack']['yum']['uri'] =
   if node['platform_version'].to_i >= 8
-    "http://mirror.centos.org/centos/$releasever/cloud/$basearch/openstack-#{node['openstack']['release']}"
+    "https://mirrors.centos.org/metalink?repo=centos-cloud-sig-openstack-#{node['openstack']['release']}-$releasever-stream&arch=$basearch&protocol=https,http"
   else
     "http://mirror.centos.org/centos/$releasever/cloud/$basearch/openstack-#{node['openstack']['release']}"
   end
-default['openstack']['yum']['repo-key'] = "https://github.com/rdo-infra/rdo-release/raw/#{node['openstack']['release']}-rdo/RPM-GPG-KEY-CentOS-SIG-Cloud"
+default['openstack']['yum']['repo-key'] = "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud"
 # Enforcing GnuPG signature check for RDO repo. Set this to false if you want to disable the check.
 default['openstack']['yum']['gpgcheck'] = true
 default['openstack']['endpoints']['family'] = 'inet'
