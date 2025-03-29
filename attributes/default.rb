@@ -126,7 +126,7 @@ default['openstack']['secret']['user_passwords_data_bag'] = 'user_passwords'
 # needs.
 
 # The coordinated release of OpenStack codename
-default['openstack']['release'] = 'train'
+default['openstack']['release'] = 'caracal'
 
 # The Ubuntu Cloud Archive has packages for multiple Ubuntu releases. For
 # more information, see: https://wiki.ubuntu.com/ServerTeam/CloudArchive.
@@ -149,7 +149,7 @@ default['openstack']['yum']['uri'] =
   else
     "http://mirror.centos.org/centos/$releasever/cloud/$basearch/openstack-#{node['openstack']['release']}"
   end
-default['openstack']['yum']['repo-key'] = "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud"
+default['openstack']['yum']['repo-key'] = "https://www.centos.org/keys/RPM-GPG-KEY-CentOS-SIG-Cloud"
 # Enforcing GnuPG signature check for RDO repo. Set this to false if you want to disable the check.
 default['openstack']['yum']['gpgcheck'] = true
 default['openstack']['endpoints']['family'] = 'inet'
